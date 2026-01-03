@@ -2,6 +2,10 @@ import logging
 import os
 from datetime import datetime
 
+"""
+Logger configuration for the application.
+"""
+
 # Create logs directory and log file path
 LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
 logs_dir = os.path.join(os.getcwd(), "logs")

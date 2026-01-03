@@ -1,5 +1,5 @@
 import sys
-import logging
+from logger import logging
 
 """
 Custom exception class to handle exceptions with detailed error messages.
