@@ -7,4 +7,6 @@ flask
 catboost 
 xgboost
 scikit-learn
+dill
+jinja2
 -e .
