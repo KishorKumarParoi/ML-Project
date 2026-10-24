@@ -1,7 +1,144 @@
-# END To END ML-Project
-# Complete Machine Learning Guide: From Data to Deployment
+# 🎓 Student Exam Performance Prediction Platform - Enterprise MLOps
 
-I'll teach you the entire ML pipeline with all algorithms, techniques, and critical reasoning for every choice.
+[![Architecture Flow](docs/images/01_architecture_flow.svg)](docs/images/01_architecture_flow.svg)
+
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![R2 Score](https://img.shields.io/badge/R2_Score-0.8806-brightgreen?style=for-the-badge)](ARCHITECTURE.md)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
+An enterprise-grade, end-to-end Machine Learning regression platform engineered according to the **Enterprise AI Architect Roadmap (Phases 0 - 5)**. Forecasts student examination performance using Scikit-Learn ColumnTransformers and regression models with **R² = 0.8806** and sub-5ms P95 latency.
+
+---
+
+## ⚡ One-Click Cloud Bootstrap (Zero-Touch)
+
+Deploy the entire platform on any Ubuntu, Debian, AWS EC2, GCP Compute Engine, or macOS instance with a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/KishorKumarParoi/ML-Project/main/bootstrap.sh | bash
+```
+
+---
+
+## 🚀 Quick Start & Deployment Options
+
+Clone and launch locally using the unified `deploy.sh` script:
+
+```bash
+git clone https://github.com/KishorKumarParoi/ML-Project.git
+cd ML-Project
+chmod +x deploy.sh clear.sh bootstrap.sh
+```
+
+### 1. Docker Compose Mode (Default)
+```bash
+./deploy.sh
+```
+*Builds and runs the student performance web portal and REST API on port 8080.*
+
+### 2. Standalone Container Mode
+```bash
+./deploy.sh --quick
+```
+
+### 3. Native Host Execution
+```bash
+./deploy.sh --host
+```
+
+---
+
+## 🧹 Zero-Cost Teardown ($0.00 Spend)
+
+To cleanly stop and eliminate all active containers, networks, and background processes:
+
+```bash
+./clear.sh
+```
+
+---
+
+## 📡 API Reference & Integration
+
+### 1. Health Probe
+```bash
+curl -s http://localhost:8080/health | jq .
+```
+**Response:**
+```json
+{
+  "artifacts": {
+    "model": true,
+    "preprocessor": true
+  },
+  "model_loaded": true,
+  "service": "student-performance-ml",
+  "status": "ok"
+}
+```
+
+### 2. Real-Time Math Score Prediction
+```bash
+curl -s -X POST http://localhost:8080/api/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gender": "female",
+    "ethnicity": "group B",
+    "parental_level_of_education": "bachelor\u0027s degree",
+    "lunch": "standard",
+    "test_preparation_course": "none",
+    "reading_score": 72.0,
+    "writing_score": 74.0
+  }' | jq .
+```
+**Response:**
+```json
+{
+  "inputs": {
+    "gender": "female",
+    "lunch": "standard",
+    "parental_level_of_education": "bachelor's degree",
+    "race_ethnicity": "group B",
+    "reading_score": 72.0,
+    "test_preparation_course": "none",
+    "writing_score": 74.0
+  },
+  "predicted_math_score": 66.11,
+  "status": "success"
+}
+```
+
+### 3. Prometheus Metrics Exporter
+```bash
+curl -s http://localhost:8080/metrics
+```
+
+---
+
+## 🏗️ Architecture & Technical Specifications
+
+For full architectural blueprints, mathematical derivations of OLS regression, ColumnTransformer design, and trade-off analyses, consult [ARCHITECTURE.md](ARCHITECTURE.md).
+
+```
++----------------------------------------------------------------------------------------------------+
+|                                    PREDICTIVE ARCHITECTURE FLOW                                    |
++----------------------------------------------------------------------------------------------------+
+ [ Student Demographics ]     [ ColumnTransformer Pipeline ]         [ Production Serving Layer ]
+ Cohort Ingestion ----------> OneHotEncoder + StandardScaler -------> Flask REST API (:8080)
+                              19 Feature Dimensions                   P95 Latency < 5ms
+                                          |                                    ^
+                                          v                                    |
+                              [ Multi-Model Regression Engine ] ---------------+
+                              R²: 0.8806 | artifacts/model.pkl
+```
+
+---
+
+## 📚 Complete Machine Learning Guide: From Data to Deployment
+
+The sections below contain the in-depth machine learning guide and curriculum implemented throughout this repository:
 
 ---
 

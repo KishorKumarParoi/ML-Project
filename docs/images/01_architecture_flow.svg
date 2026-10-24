@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-ml" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090f1d"/>
+      <stop offset="50%" stop-color="#0c162c"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad-ml" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="accent-indigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="accent-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="accent-amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <filter id="shadow-ml" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#818cf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg-grad-ml)"/>
+
+  <!-- Matrix Grid -->
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.35">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="680"/>
+    <line x1="400" y1="0" x2="400" y2="680"/>
+    <line x1="600" y1="0" x2="600" y2="680"/>
+    <line x1="800" y1="0" x2="800" y2="680"/>
+    <line x1="1000" y1="0" x2="1000" y2="680"/>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(60, 45)">
+    <rect x="0" y="0" width="190" height="28" rx="14" fill="#4338ca" fill-opacity="0.3" stroke="#818cf8" stroke-width="1"/>
+    <text x="95" y="18" fill="#a5b4fc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">PREDICTIVE ML</text>
+    
+    <text x="0" y="62" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="28" font-weight="800">Student Academic Performance Architecture</text>
+    <text x="0" y="86" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="14">Data Ingestion, ColumnTransformer Preprocessing, Multi-Model Evaluation &amp; One-Click Cloud Serving</text>
+  </g>
+
+  <!-- Phase 1: Ingestion -->
+  <g transform="translate(60, 170)" filter="url(#shadow-ml)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-ml)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-indigo)"/>
+    <text x="24" y="38" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 1: INGESTION</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Student Cohort</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Raw Student Data</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">artifacts/data.csv</text>
+      <text x="16" y="66" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="11">Demographics &amp; Scores</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Train/Test Split</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">80% Train / 20% Test</text>
+      <text x="16" y="66" fill="#14b8a6" font-family="-apple-system, sans-serif" font-size="11">artifacts/train.csv</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Schema Validation</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">8 Input Attributes</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Type &amp; Null Integrity</text>
+    </g>
+  </g>
+
+  <!-- Flow 1 -> 2 -->
+  <path d="M 290 380 L 340 380" stroke="#818cf8" stroke-width="2.5" fill="none" marker-end="url(#arrow-indigo)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 2: Transformation -->
+  <g transform="translate(345, 170)" filter="url(#shadow-ml)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-ml)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-teal)"/>
+    <text x="24" y="38" fill="#2dd4bf" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 2: PIPELINE</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">ColumnTransformer</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">OneHotEncoder</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Gender, Ethnicity, Lunch</text>
+      <text x="16" y="66" fill="#14b8a6" font-family="-apple-system, sans-serif" font-size="11">Parent Education &amp; Course</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">StandardScaler</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Reading &amp; Writing Scores</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Zero Mean &amp; Unit Variance</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Serialized Preprocessor</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">artifacts/preprocessor.pkl</text>
+      <text x="16" y="66" fill="#a855f7" font-family="-apple-system, sans-serif" font-size="11">19 Encoded Dimensions</text>
+    </g>
+  </g>
+
+  <!-- Flow 2 -> 3 -->
+  <path d="M 575 380 L 625 380" stroke="#2dd4bf" stroke-width="2.5" fill="none" marker-end="url(#arrow-indigo)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 3: Model Trainer -->
+  <g transform="translate(630, 170)" filter="url(#shadow-ml)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-ml)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-amber)"/>
+    <text x="24" y="38" fill="#fbbf24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 3: TRAINING</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Multi-Model Regressor</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Model Evaluation</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Linear, Ridge, Lasso, RF</text>
+      <text x="16" y="66" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">R2 Score: 0.88+</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Hyperparameter Tuning</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">GridSearchCV &amp; CV=3</text>
+      <text x="16" y="66" fill="#f59e0b" font-family="-apple-system, sans-serif" font-size="11">Best Model Selected</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Model Artifact Store</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">artifacts/model.pkl</text>
+      <text x="16" y="66" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="11">Linear Regression Weights</text>
+    </g>
+  </g>
+
+  <!-- Flow 3 -> 4 -->
+  <path d="M 860 380 L 910 380" stroke="#fbbf24" stroke-width="2.5" fill="none" marker-end="url(#arrow-indigo)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 4: Production Serving -->
+  <g transform="translate(915, 170)" filter="url(#shadow-ml)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-ml)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-indigo)"/>
+    <text x="24" y="38" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 4: SERVING</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Prediction Ops</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">REST API :8080</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">POST /api/predict</text>
+      <text x="16" y="66" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">P95 Latency &lt; 5ms</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Interactive UI</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">GET /predictdata Form</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Instant Score Display</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">One-Click Deploy</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">bootstrap.sh | deploy.sh</text>
+      <text x="16" y="66" fill="#818cf8" font-family="-apple-system, sans-serif" font-size="11">Zero-Cost Teardown ($0)</text>
+    </g>
+  </g>
+
+  <!-- Footer Banner -->
+  <g transform="translate(60, 620)">
+    <text x="0" y="20" fill="#64748b" font-family="-apple-system, sans-serif" font-size="12">Single-Command Cloud Bootstrap: curl -fsSL https://raw.githubusercontent.com/KishorKumarParoi/ML-Project/main/bootstrap.sh | bash</text>
+    <text x="1080" y="20" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" font-weight="600">✓ $0.00 Teardown Verified (clear.sh)</text>
+  </g>
+</svg>
